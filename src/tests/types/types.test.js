@@ -2,7 +2,7 @@ import { types } from "../../types/types"
 
 
 describe('Pruebas en el objeto types', () => {
-    test('debe de ser igual a ', () => {
+    test('debe de tener nuestros types ', () => {
 
         expect( types ).toEqual({
 
