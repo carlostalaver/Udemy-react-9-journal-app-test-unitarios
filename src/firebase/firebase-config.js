@@ -7,7 +7,7 @@ import 'firebase/auth';
    .env.development o .env.test estos archivos se llaman asi porque así los define ->https://create-react-app.dev/docs/adding-custom-environment-variables
    y los nombres de las variables deben comenzar con REACT_APP_ para que react los pueda tomar segun el ambiente
 */
-console.log(process.env);
+// console.log(process.env);
 
 const firebaseConfig = {
     apiKey : process.env.REACT_APP_APIKEY,
