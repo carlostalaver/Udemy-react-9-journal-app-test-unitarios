@@ -29,7 +29,8 @@ let store = mockStore( initState );
      esta configuracion es para poder hacer funcionar el test('startUploading debe de actualizar la url de la nota´)
      que a nivel de pruebas no puedo usar la consola como la que tiene el navegador, entonces sobreescribo la funcion scrollTo para que no me de error*/
      global.scrollTo = jest.fn(); 
-     
+
+/*Creo un mock de la funcion  fileUpload*/
 import {
     fileUpload
 } from '../../helpers/fileUpload';

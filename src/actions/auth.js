@@ -11,10 +11,9 @@ export const startLoginEmailPassword = (email, password) => {
 
         dispatch( startLoading() );
         
-        
-        firebase.auth().signInWithEmailAndPassword( email, password )
+        return firebase.auth().signInWithEmailAndPassword( email, password ) // agregue el return para poder hacer los test unitarios
             .then( ({ user }) => {
-                dispatch(login( user.uid, user.displayName ));
+                dispatch( login( user.uid, user.displayName ) );
 
                 dispatch( finishLoading() );
             })
@@ -22,10 +21,7 @@ export const startLoginEmailPassword = (email, password) => {
                 console.log(e);
                 dispatch( finishLoading() );
                 Swal.fire('Error', e.message, 'error');
-            })
-
-        
-        
+            }) 
     }
 }
 

@@ -31,11 +31,11 @@ export const RegisterScreen = () => {
     }
 
     const isFormValid = () => {
-        
         if ( name.trim().length === 0 ) {
             dispatch( setError('Name is required') )
             return false;
         } else if ( !validator.isEmail( email ) ) {
+            console.log('email ', !validator.isEmail( email ))
             dispatch( setError('Email is not valid') )
             return false;
         } else if ( password !== password2 || password.length < 5 ) {
@@ -44,7 +44,7 @@ export const RegisterScreen = () => {
         }
         
         dispatch( removeError() );
-       return true;
+        return true;
     }
 
     return (
